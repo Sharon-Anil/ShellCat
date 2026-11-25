@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is a penetration test (VAPT)?",
+    "answer": "A penetration test (Vulnerability Assessment and Penetration Testing, or VAPT) is an authorised security test where we safely check your website or application the way a real attacker would, to find security weaknesses before attackers can exploit them."
+  },
+  {
+    "question": "Is testing safe for my live website?",
+    "answer": "Every security engagement starts with written authorisation, an agreed scope, defined rules of engagement, an agreed testing window and an emergency contact so testing is conducted responsibly around your operations."
+  },
+  {
+    "question": "What do you need from us before testing?",
+    "answer": "Before we begin any testing, we confirm five items: written authorisation, an agreed scope, rules of engagement, an agreed testing window and an emergency contact."
+  },
+  {
+    "question": "How long does a Web Check take?",
+    "answer": "A SHELLCAT Web Check is a one-time basic website security assessment covering common vulnerability checks, SSL and security configuration review, a findings summary and recommended improvements. Typical turnaround: [DURATION]."
+  },
+  {
+    "question": "What will I receive at the end?",
+    "answer": "Depending on the package, you receive a clear findings summary or detailed technical report with risk classification and practical remediation recommendations—not just a list of problems. Red Team engagements also include findings, evidence, and executive and technical reports; monthly plans include a monthly website health or security report."
+  },
+  {
+    "question": "Do you fix the problems you find, or only report them?",
+    "answer": "Because SHELLCAT provides cybersecurity and software development under one roof, we provide clear remediation recommendations and guidance—and we also offer website development, custom applications and monthly protection plans (SHIELD and COMPLETE) that cover scheduled updates, WAF management and agreed maintenance."
+  },
+  {
+    "question": "How is the final price decided?",
+    "answer": "All published prices are introductory starting prices so you can plan your budget before the first call. Final quotations depend on asset count, application complexity, scope, testing depth and engagement duration."
+  },
+  {
+    "question": "Will our data stay confidential?",
+    "answer": "Every security engagement follows an agreed scope and defined rules of engagement under written authorisation. Confidentiality and non-disclosure terms: [NDA DETAILS]."
+  },
+  {
+    "question": "Can you help us prepare for the DPDP Act?",
+    "answer": "Most obligations under India's Digital Personal Data Protection (DPDP) Act, 2023—including reasonable security safeguards and breach reporting—are scheduled to start on 13 May 2027. Security testing (such as Web Check, Web VAPT and Security Auditing) alongside recurring monthly checks (CARE, SHIELD and COMPLETE) helps businesses find weaknesses early and support ongoing technical safeguards. Note: technical testing is general security support, not legal advice, and does not by itself make a business 'DPDP compliant'—for full compliance, consult a legal adviser."
+  }
+]

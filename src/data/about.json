@@ -1,0 +1,65 @@
+{
+  "whoWeAre": [
+    "SHELLCAT is a cybersecurity and technology company focused on helping businesses identify security weaknesses, strengthen their digital infrastructure and build reliable software solutions.",
+    "We combine offensive security expertise, practical security assessments and modern software development to help organisations operate with greater confidence in an increasingly connected world."
+  ],
+  "mission": "To make digital systems more secure, resilient and reliable through ethical security testing and innovative technology.",
+  "vision": "To become a trusted international technology and cybersecurity company recognised for technical excellence, responsible security practices and innovation.",
+  "coreValues": [
+    { "title": "Ethical Security", "icon": "ethical" },
+    { "title": "Technical Excellence", "icon": "excellence" },
+    { "title": "Innovation", "icon": "innovation" },
+    { "title": "Transparency", "icon": "transparency" },
+    { "title": "Customer Trust", "icon": "trust" }
+  ],
+  "differentiators": [
+    {
+      "title": "Human-led, not scan-only",
+      "description": "Expert manual testing alongside automated tools, to find the flaws that scanners alone miss.",
+      "icon": "human-led"
+    },
+    {
+      "title": "Clear starting prices",
+      "description": "Published, so clients can plan their budget before the first call.",
+      "icon": "clear-prices"
+    },
+    {
+      "title": "Reports you can act on",
+      "description": "Clear findings and practical recommendations, not just a list of problems.",
+      "icon": "reports"
+    },
+    {
+      "title": "We build and we secure",
+      "description": "Development and security under one roof.",
+      "icon": "build-secure"
+    },
+    {
+      "title": "Authorised, always",
+      "description": "Written authorisation, agreed scope and rules of engagement.",
+      "icon": "authorised"
+    },
+    {
+      "title": "Protection that continues",
+      "description": "Monthly plans keep checking after launch.",
+      "icon": "continues"
+    }
+  ],
+  "stats": [
+    {
+      "value": "₹25.5 crore",
+      "description": "average cost of a data breach in India in 2026, the highest ever recorded",
+      "footnote": "1"
+    },
+    {
+      "value": "₹2.47 crore",
+      "description": "average saving per breach from offensive security testing such as penetration testing and red teaming, the biggest cost-reducing factor in India",
+      "footnote": "1"
+    },
+    {
+      "value": "Up to ₹250 crore",
+      "description": "maximum penalty under India's DPDP Act, 2023 for failing to take reasonable security safeguards",
+      "footnote": "2"
+    }
+  ],
+  "statsSource": "Sources: ¹ IBM, Cost of a Data Breach Report 2026, India findings (released 3 August 2026); ² Digital Personal Data Protection Act, 2023, Schedule."
+}

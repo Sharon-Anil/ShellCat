@@ -1,0 +1,50 @@
+{
+  "company": "SHELLCAT",
+  "wordmark": "ShellCat",
+  "tagline": "PENTESTING · BUG BOUNTY",
+  "pillars": [
+    "CYBERSECURITY",
+    "SOFTWARE DEVELOPMENT",
+    "DIGITAL PROTECTION"
+  ],
+  "concept": "SHELL = the Linux terminal; CAT = the Linux cat command.",
+  "location": "Kerala, India",
+  "siteUrlPlaceholder": "[INSERT OFFICIAL WEBSITE]",
+  "whatsappNumber": "[NUMBER]",
+  "whatsappPrefillText": "Hi SHELLCAT, I'd like a Web Check",
+  "whatsappUrl": "https://wa.me/[NUMBER]?text=Hi%20SHELLCAT%2C%20I%27d%20like%20a%20Web%20Check",
+  "email": "[INSERT OFFICIAL BUSINESS EMAIL]",
+  "phone": "[INSERT BUSINESS PHONE]",
+  "socialLinksPlaceholder": "[INSERT OFFICIAL SOCIAL LINKS]",
+  "socialLinks": [
+    { "label": "GitHub", "href": "[INSERT GITHUB LINK]" },
+    { "label": "LinkedIn", "href": "[INSERT LINKEDIN LINK]" },
+    { "label": "X", "href": "[INSERT X LINK]" },
+    { "label": "YouTube", "href": "[INSERT YOUTUBE LINK]" }
+  ],
+  "bookingLink": "[BOOKING LINK]",
+  "responseTime": "[e.g. within 1 business day]",
+  "gstNote": "[GST: confirm whether prices include or exclude GST]",
+  "legal": {
+    "jurisdiction": "[INSERT GOVERNING LAW / JURISDICTION — e.g. Kerala, India]",
+    "dataRetention": "[INSERT DATA RETENTION PERIOD — e.g. 12 months]",
+    "ndaDetails": "[NDA DETAILS]",
+    "pgpKey": "[OPTIONAL PGP FINGERPRINT]"
+  },
+  "founder": {
+    "name": "[FOUNDER NAME]",
+    "role": "Founder, SHELLCAT",
+    "photoPlaceholder": "[FOUNDER PHOTO]",
+    "bio": "[FOUNDER SHORT BIO]"
+  },
+  "nav": [
+    { "label": "Services", "href": "/services" },
+    { "label": "Development", "href": "/development" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "How We Work", "href": "/how-we-work" },
+    { "label": "DPDP", "href": "/dpdp-readiness" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "brochurePdf": "/downloads/SHELLCAT-Brochure.pdf"
+}

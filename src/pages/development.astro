@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import Icon from '../components/Icon.astro';
+import PricingCard from '../components/PricingCard.astro';
+import FinalCtaBand from '../components/FinalCtaBand.astro';
+import devServices from '../data/development-services.json';
+import pricing from '../data/pricing.json';
+import site from '../data/site.json';
+
+const devSchemas = devServices.map((d) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: d.title,
+  description: d.summary,
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'SHELLCAT',
+    areaServed: 'Kerala, India',
+  },
+}));
+---
+
+<BaseLayout
+  title="Software & Web Development — Websites, E-commerce, Custom Apps & SaaS | SHELLCAT"
+  description="Business websites, e-commerce stores, custom web applications and SaaS platforms built with security hardening from day one by SHELLCAT in Kerala, India."
+  currentPath="/development"
+  schemas={devSchemas}
+>
+  <section class="border-b border-border bg-shellcat-grid py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <SectionLabel file="build.txt" />
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-mist sm:text-5xl">
+        Build. Protect. Maintain.
+      </h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-secondary sm:text-lg">
+        Development and security under one roof. We design fast, reliable websites and custom software—with security hardening built into every project before launch.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="/contact?service=Business+Website+Development"
+          class="inline-flex items-center gap-2 rounded-xl bg-lime px-6 py-3.5 text-sm font-semibold text-night transition-colors hover:bg-lime-hover"
+        >
+          <span>Discuss your project</span>
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+        <a
+          href={site.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-mist transition-colors hover:border-lime/60 hover:text-lime"
+        >
+          <Icon name="whatsapp" class="h-4 w-4 text-lime" />
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 lg:grid-cols-2">
+        {devServices.map((item) => (
+          <article id={item.slug} class="flex flex-col justify-between rounded-2xl border border-border bg-surface p-6 sm:p-8">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-night text-lime">
+                  <Icon name={item.icon} class="h-6 w-6" />
+                </div>
+                <span class="rounded-full border border-border bg-night px-3 py-1 font-mono text-xs text-secondary">
+                  {item.startingPackage}
+                </span>
+              </div>
+
+              <h2 class="mt-5 text-2xl font-extrabold text-mist">{item.title}</h2>
+              <p class="mt-2.5 text-base leading-relaxed text-mist">{item.summary}</p>
+              <p class="mt-3 text-sm leading-relaxed text-secondary">
+                <strong class="text-mist">Who it&apos;s for:</strong> {item.whoItIsFor}
+              </p>
+
+              <ul class="mt-5 space-y-2 border-t border-border pt-5 text-sm text-secondary">
+                {item.highlights.map((highlight) => (
+                  <li class="flex items-start gap-2.5">
+                    <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-lime" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="mt-7">
+              <a
+                href={`/contact?service=${encodeURIComponent(item.title)}`}
+                class="inline-flex items-center gap-2 rounded-xl border border-border bg-night px-5 py-3 text-sm font-semibold text-mist transition-colors hover:border-lime hover:text-lime"
+              >
+                <span>Book this</span>
+                <Icon name="arrow-right" class="h-4 w-4" />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-surface/30 py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <SectionLabel file="website-packages.txt" />
+          <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-mist sm:text-4xl">
+            Website Packages
+          </h2>
+          <p class="mt-2 text-base text-secondary">
+            Transparent one-time packages designed for businesses, institutions and growing software teams.
+          </p>
+        </div>
+
+        <a
+          href="/pricing"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-lime hover:text-lime-hover"
+        >
+          <span>Compare all packages</span>
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {pricing.websitePackages.map((pkg) => (
+          <PricingCard
+            brandPrefix={pkg.brandPrefix}
+            name={pkg.name}
+            price={pkg.price}
+            billing={pkg.billing}
+            features={pkg.features}
+            bookingValue={
+              pkg.slug === 'shellcat-business-plus'
+                ? 'SHELLCAT BUSINESS PLUS Package (₹1,20,000)'
+                : `${pkg.brandPrefix} ${pkg.name} Website Package (${pkg.price})`
+            }
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FinalCtaBand />
+</BaseLayout>

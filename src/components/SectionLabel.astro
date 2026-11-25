@@ -1,0 +1,13 @@
+---
+interface Props {
+  file: string;
+  class?: string;
+}
+
+const { file, class: className = '' } = Astro.props;
+---
+
+<p class={`terminal-label inline-flex items-center gap-2 ${className}`}>
+  <span class="terminal-label-prompt" aria-hidden="true">$</span>
+  <span>cat {file}</span>
+</p>

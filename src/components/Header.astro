@@ -1,0 +1,134 @@
+---
+import site from '../data/site.json';
+import Icon from './Icon.astro';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+---
+
+<header class="sticky top-0 z-40 border-b border-border/90 bg-night/95 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-8">
+    <a
+      href="/"
+      class="inline-flex shrink-0 items-center rounded-md py-1 focus-visible:outline-offset-4"
+      aria-label="SHELLCAT Home"
+    >
+      <img
+        src="/logos/shellcat-horizontal-on-dark.svg"
+        alt="ShellCat"
+        width="146"
+        height="46"
+        class="h-9 w-auto sm:h-10"
+        decoding="async"
+      />
+    </a>
+
+    <nav aria-label="Main navigation" class="hidden items-center gap-1 lg:flex">
+      {site.nav.map((item) => {
+        const isActive =
+          item.href === '/'
+            ? currentPath === '/'
+            : currentPath === item.href || currentPath.startsWith(`${item.href}/`);
+        return (
+          <a
+            href={item.href}
+            aria-current={isActive ? 'page' : undefined}
+            class={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              isActive
+                ? 'bg-surface text-lime'
+                : 'text-secondary hover:bg-surface/70 hover:text-mist'
+            }`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <div class="flex items-center gap-2.5">
+      <a
+        href={site.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with SHELLCAT on WhatsApp"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-mist transition-colors hover:border-lime/60 hover:text-lime"
+      >
+        <Icon name="whatsapp" class="h-5 w-5" />
+      </a>
+
+      <a
+        href="/contact?service=SHELLCAT+WEB+CHECK+(Starting+at+₹10,000)"
+        class="hidden sm:inline-flex items-center justify-center rounded-lg bg-lime px-4 py-2.5 text-sm font-semibold text-night transition-colors hover:bg-lime-hover"
+      >
+        Book a Web Check
+      </a>
+
+      <button
+        type="button"
+        id="mobile-menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-menu-panel"
+        aria-label="Open navigation menu"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-mist transition-colors hover:border-lime/60 hover:text-lime lg:hidden"
+      >
+        <span data-icon-open>
+          <Icon name="menu" class="h-5 w-5" />
+        </span>
+        <span data-icon-close class="hidden">
+          <Icon name="close" class="h-5 w-5" />
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu-panel"
+    hidden
+    class="border-t border-border bg-night px-4 pb-6 pt-4 sm:px-6 lg:hidden"
+  >
+    <nav aria-label="Mobile navigation" class="flex flex-col gap-1">
+      {site.nav.map((item) => {
+        const isActive =
+          item.href === '/'
+            ? currentPath === '/'
+            : currentPath === item.href || currentPath.startsWith(`${item.href}/`);
+        return (
+          <a
+            href={item.href}
+            aria-current={isActive ? 'page' : undefined}
+            class={`rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
+              isActive
+                ? 'bg-surface text-lime'
+                : 'text-secondary hover:bg-surface hover:text-mist'
+            }`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <div class="mt-4 flex flex-col gap-2.5 border-t border-border pt-4">
+      <a
+        href="/contact?service=SHELLCAT+WEB+CHECK+(Starting+at+₹10,000)"
+        class="inline-flex items-center justify-center rounded-lg bg-lime px-4 py-3 text-sm font-semibold text-night transition-colors hover:bg-lime-hover"
+      >
+        Book a Web Check
+      </a>
+      <a
+        href={site.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 py-3 text-sm font-medium text-mist transition-colors hover:border-lime/60"
+      >
+        <Icon name="whatsapp" class="h-4 w-4 text-lime" />
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline src="/scripts/site.js" defer></script>

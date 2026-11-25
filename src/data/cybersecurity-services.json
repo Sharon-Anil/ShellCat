@@ -1,0 +1,152 @@
+[
+  {
+    "number": "01",
+    "slug": "website-penetration-testing-vapt",
+    "title": "Website Penetration Testing (VAPT)",
+    "icon": "web-vapt",
+    "shortLine": "We safely test your website the way a real attacker would, with your permission, to find vulnerabilities before attackers can exploit them.",
+    "whatItIs": "We safely test your website the way a real attacker would, with your permission, to find vulnerabilities before attackers can exploit them.",
+    "whoItIsFor": "Business websites, schools, clinics, startups and e-commerce stores that want to confirm their public site and hosting setup do not leave easy doors open.",
+    "whatYouReceive": [
+      "Manual and automated security testing within an agreed scope",
+      "Checks on common vulnerabilities, SSL and security headers",
+      "Risk classification for each finding in plain language",
+      "Detailed technical report and practical remediation recommendations"
+    ]
+  },
+  {
+    "number": "02",
+    "slug": "web-application-security-testing",
+    "title": "Web Application Security Testing",
+    "icon": "web-app",
+    "shortLine": "We assess login systems, user accounts, forms, databases and application functions for gaps that could expose data or allow misuse.",
+    "whatItIs": "We assess login systems, user accounts, forms, databases and application functions for gaps that could expose data or allow misuse.",
+    "whoItIsFor": "Organisations running customer portals, student or employee management systems, booking platforms, admin dashboards or custom web applications.",
+    "whatYouReceive": [
+      "Authentication, session and access-control testing",
+      "OWASP-based vulnerability assessment across forms, roles and workflows",
+      "Proof of impact captured safely without disrupting real users",
+      "Clear remediation steps your developers can apply quickly"
+    ]
+  },
+  {
+    "number": "03",
+    "slug": "api-security-testing",
+    "title": "API Security Testing",
+    "icon": "api",
+    "shortLine": "APIs are the connections that let your software systems talk to each other. We find the weaknesses in them before someone else does.",
+    "whatItIs": "APIs are the connections that let your software systems talk to each other. We find the weaknesses in them before someone else does.",
+    "whoItIsFor": "Web applications, mobile app backends, SaaS platforms and e-commerce stores that connect to payment gateways, mobile clients or third-party tools.",
+    "whatYouReceive": [
+      "Endpoint authentication and authorisation checks",
+      "Assessment for sensitive data exposure and broken object access",
+      "Validation and rate-limiting review across agreed endpoints",
+      "Technical report with actionable API hardening guidance"
+    ]
+  },
+  {
+    "number": "04",
+    "slug": "network-security-assessment",
+    "title": "Network Security Assessment",
+    "icon": "network",
+    "shortLine": "We assess servers, routers, computers and network infrastructure for weaknesses that could let an attacker in.",
+    "whatItIs": "We assess servers, routers, computers and network infrastructure for weaknesses that could let an attacker in.",
+    "whoItIsFor": "Offices, schools, clinics and growing companies running internal servers, Wi-Fi networks, cloud servers or exposed services.",
+    "whatYouReceive": [
+      "Network discovery and exposed-port mapping within scope",
+      "Server and device security configuration checks",
+      "Vulnerability scanning verified by human review",
+      "Prioritised risk report and practical remediation recommendations"
+    ]
+  },
+  {
+    "number": "05",
+    "slug": "red-team-assessment",
+    "title": "Red Team Assessment",
+    "icon": "red-team",
+    "shortLine": "An authorised attack simulation that shows how well your organisation detects and responds to a real attack.",
+    "whatItIs": "An authorised attack simulation that shows how well your organisation detects and responds to a real attack.",
+    "whoItIsFor": "Organisations with established systems and security controls that want to test real-world detection, alerting and incident response readiness.",
+    "whatYouReceive": [
+      "Authorised attack simulation built around agreed scenarios",
+      "Evaluation of security detection and response procedures",
+      "Evidence trail showing what succeeded and where defenders spotted activity",
+      "Separate executive summary and technical remediation reports"
+    ]
+  },
+  {
+    "number": "06",
+    "slug": "cloud-security-assessment",
+    "title": "Cloud Security Assessment",
+    "icon": "cloud",
+    "shortLine": "We review cloud configurations, access permissions, storage and exposed services, where one wrong setting can expose your data.",
+    "whatItIs": "We review cloud configurations, access permissions, storage and exposed services, where one wrong setting can expose your data.",
+    "whoItIsFor": "Startups, SaaS teams and businesses hosting files, databases or applications on cloud platforms.",
+    "whatYouReceive": [
+      "Review of storage buckets, public exposure and network rules",
+      "Identity and access permission review (least-privilege checks)",
+      "Service configuration review against practical security baselines",
+      "Prioritised action checklist to lock down exposed settings"
+    ]
+  },
+  {
+    "number": "07",
+    "slug": "mobile-application-security-testing",
+    "title": "Mobile Application Security Testing",
+    "icon": "mobile",
+    "shortLine": "We assess Android and iOS apps for security weaknesses that could put your users or business at risk.",
+    "whatItIs": "We assess Android and iOS apps for security weaknesses.",
+    "whoItIsFor": "Businesses, e-commerce brands, clinics, schools and startups offering customer or staff apps on Android or iOS.",
+    "whatYouReceive": [
+      "Assessment of local data storage, session handling and app transport security",
+      "Review of how the app communicates with its backend APIs",
+      "Identification of insecure secrets or debug settings inside builds",
+      "Clear technical report with developer-ready fixes"
+    ]
+  },
+  {
+    "number": "08",
+    "slug": "malware-analysis",
+    "title": "Malware Analysis",
+    "icon": "malware",
+    "shortLine": "Found a suspicious file or program? We investigate how it behaves and what risk it poses, so you know what you are dealing with.",
+    "whatItIs": "We investigate suspicious files and software to understand their behaviour and risk.",
+    "whoItIsFor": "Businesses or system administrators who found an unknown script, attachment, modified website file or suspicious executable.",
+    "whatYouReceive": [
+      "Isolated inspection of suspicious files or scripts",
+      "Plain-language explanation of what the file attempts to do",
+      "Indicators and risk level assessment",
+      "Practical next steps for containment and cleanup"
+    ]
+  },
+  {
+    "number": "09",
+    "slug": "security-auditing",
+    "title": "Security Auditing",
+    "icon": "audit",
+    "shortLine": "A structured review of your security configurations, practices and controls, with clear recommendations to close the gaps.",
+    "whatItIs": "A structured review of security configurations, practices and controls.",
+    "whoItIsFor": "Business owners, institutions and growing teams who want an honest baseline review of their digital controls and readiness practices.",
+    "whatYouReceive": [
+      "Structured review of current configurations, access practices and safeguards",
+      "Gap summary highlighting highest-risk areas first",
+      "Practical recommendations suited to your team size and budget",
+      "Clear documentation to support internal security tracking"
+    ]
+  },
+  {
+    "number": "10",
+    "slug": "incident-investigation",
+    "title": "Incident Investigation",
+    "icon": "incident",
+    "shortLine": "Think you have been compromised? We help investigate suspected security incidents: what happened, how, and what to do next.",
+    "whatItIs": "We help investigate suspected security incidents and compromises.",
+    "whoItIsFor": "Organisations noticing unauthorised logins, website defacement, unexpected redirects, suspicious files or suspected data exposure.",
+    "whatYouReceive": [
+      "Structured investigation into what happened and likely entry points",
+      "Evidence preservation guidance and timeline summary",
+      "Practical steps to stop ongoing misuse and secure accounts",
+      "Recommendations to reduce the chance of repeat incidents"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+# Responsible security reporting for SHELLCAT
+# Replace placeholders before launching production domain
+Contact: mailto:[INSERT OFFICIAL BUSINESS EMAIL]
+Policy: https://shellcat.example/legal/responsible-disclosure
+Preferred-Languages: en
+Canonical: https://shellcat.example/.well-known/security.txt
+Expires: 2027-11-25T23:59:59Z
+# Encryption: [OPTIONAL PGP KEY URL PLACEHOLDER]

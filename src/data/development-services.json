@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "business-website-development",
+    "title": "Business Website Development",
+    "icon": "dev-website",
+    "summary": "Professional websites for businesses, educational institutions, startups and organisations.",
+    "whoItIsFor": "Local and international businesses, schools, clinics, startups and institutions needing a fast, credible online presence.",
+    "highlights": [
+      "Responsive desktop and mobile layout designed for clarity",
+      "Enquiry forms, WhatsApp integration and clear service architecture",
+      "Basic SEO structure and security hardening built in from day one",
+      "Clean handover and optional ongoing monthly protection"
+    ],
+    "startingPackage": "SHELLCAT STARTER (₹30,000)"
+  },
+  {
+    "slug": "ecommerce-development",
+    "title": "E-commerce Development",
+    "icon": "dev-ecommerce",
+    "summary": "Online shopping platforms with product catalogues, shopping carts, payment integration and order management.",
+    "whoItIsFor": "Retail brands and growing businesses ready to sell products online safely with reliable checkout and order workflows.",
+    "highlights": [
+      "Structured product catalogues and fast mobile browsing",
+      "Shopping cart, payment gateway integration and order management",
+      "Secure customer login, form validation and backup setup",
+      "Ongoing updates and security checks available under monthly plans"
+    ],
+    "startingPackage": "SHELLCAT PROFESSIONAL (₹60,000+)"
+  },
+  {
+    "slug": "custom-web-application-development",
+    "title": "Custom Web Application Development",
+    "icon": "dev-webapp",
+    "summary": "Custom-built software such as student management systems, employee management platforms, booking systems and customer portals.",
+    "whoItIsFor": "Schools, clinics, service companies and organisations replacing manual spreadsheets with tailored internal or customer-facing software.",
+    "highlights": [
+      "Admin dashboards, user login, registration and role-based access",
+      "Database and API integrations built around your exact workflows",
+      "Security testing performed before launch under one roof",
+      "Deployment, documentation and clean handover"
+    ],
+    "startingPackage": "SHELLCAT BUSINESS PLUS (₹1,20,000)"
+  },
+  {
+    "slug": "saas-product-development",
+    "title": "SaaS Product Development",
+    "icon": "dev-saas",
+    "summary": "Subscription-based software platforms designed to solve specific business problems.",
+    "whoItIsFor": "Founders and product teams launching multi-user web software products with subscription access and security baked into the architecture.",
+    "highlights": [
+      "Multi-role authentication, access control and clean API boundaries",
+      "Scalable workflows, customer dashboards and billing-ready structure",
+      "Pre-launch application and API security verification",
+      "Structured handover or continuing monthly security and maintenance"
+    ],
+    "startingPackage": "Custom scope (from ₹1,20,000)"
+  }
+]

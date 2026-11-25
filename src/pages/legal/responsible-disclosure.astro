@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+import site from '../../data/site.json';
+---
+
+<BaseLayout
+  title="Responsible Disclosure Policy — SHELLCAT"
+  description="How to report a security vulnerability in SHELLCAT web properties responsibly."
+  currentPath="/legal/responsible-disclosure"
+>
+  <section class="border-b border-border bg-shellcat-grid py-14 sm:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <SectionLabel file="responsible-disclosure.txt" />
+      <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-mist">
+        Responsible Disclosure Policy
+      </h1>
+      <p class="mt-3 text-base text-secondary">
+        We welcome good-faith security reports regarding SHELLCAT&apos;s own website and public systems.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 sm:py-16">
+    <div class="mx-auto max-w-4xl space-y-8 px-4 text-sm leading-relaxed text-secondary sm:px-6 sm:text-base lg:px-8">
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">1. How to report a vulnerability</h2>
+        <p>
+          Send clear reproduction steps, affected URLs and potential impact to{' '}
+          <span class="placeholder-token">{site.email}</span>{' '}
+          (also published at <a href="/.well-known/security.txt" class="text-lime underline underline-offset-4">/.well-known/security.txt</a>).
+        </p>
+        <p>
+          Optional encrypted reporting key: <span class="placeholder-token">{site.legal.pgpKey}</span>
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">2. Guidelines for researchers</h2>
+        <ul class="list-disc space-y-2 pl-5">
+          <li>Test only SHELLCAT-owned public properties—never client domains or third-party infrastructure.</li>
+          <li>Do not run denial-of-service traffic, automated brute-force floods or social engineering.</li>
+          <li>Stop immediately if you encounter personal or confidential data and report only what is needed to demonstrate the issue.</li>
+          <li>Allow reasonable time for us to verify and remediate before public disclosure.</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">3. Our commitment</h2>
+        <p>
+          We will acknowledge good-faith reports promptly, investigate findings transparently, and avoid legal action against researchers who follow these guidelines in good faith.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

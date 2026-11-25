@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import Icon from '../components/Icon.astro';
+import FinalCtaBand from '../components/FinalCtaBand.astro';
+import site from '../data/site.json';
+---
+
+<BaseLayout
+  title="DPDP Readiness — Reasonable Security Safeguards Before 13 May 2027 | SHELLCAT"
+  description="Understand India's Digital Personal Data Protection (DPDP) Act, 2023 in plain English: key 13 May 2027 date, up to ₹250 crore penalty ceiling, and how regular security testing helps."
+  currentPath="/dpdp-readiness"
+>
+  <section class="border-b border-border bg-shellcat-grid py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <SectionLabel file="dpdp-readiness.txt" />
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-mist sm:text-5xl">
+        DPDP Security Readiness
+      </h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-secondary sm:text-lg">
+        India&apos;s Digital Personal Data Protection (DPDP) Act, 2023 expects businesses, schools, clinics and online platforms handling personal data to keep reasonable security safeguards. Most obligations are scheduled to start on <strong class="text-mist">13 May 2027</strong>.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="/contact?service=DPDP+Security+Readiness+Assessment"
+          class="inline-flex items-center gap-2 rounded-xl bg-lime px-6 py-3.5 text-sm font-semibold text-night transition-colors hover:bg-lime-hover"
+        >
+          <span>Book a Web Check</span>
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+        <a
+          href={site.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-mist transition-colors hover:border-lime/60 hover:text-lime"
+        >
+          <Icon name="whatsapp" class="h-4 w-4 text-lime" />
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-border bg-surface p-6 sm:p-7">
+          <p class="font-mono text-xs uppercase tracking-[0.16em] text-muted">Scheduled start</p>
+          <p class="mt-2 font-display text-3xl font-extrabold text-lime">13 May 2027</p>
+          <p class="mt-3 text-sm leading-relaxed text-secondary">
+            Most DPDP Act obligations—including reasonable security safeguards and personal data breach reporting—are scheduled to take effect on this date.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-border bg-surface p-6 sm:p-7">
+          <p class="font-mono text-xs uppercase tracking-[0.16em] text-muted">Statutory penalty</p>
+          <p class="mt-2 font-display text-3xl font-extrabold text-lime">Up to ₹250 crore</p>
+          <p class="mt-3 text-sm leading-relaxed text-secondary">
+            Maximum penalty under India&apos;s DPDP Act, 2023 for failing to take reasonable security safeguards to prevent a personal data breach.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-border bg-surface p-6 sm:p-7">
+          <p class="font-mono text-xs uppercase tracking-[0.16em] text-muted">Breach cost reduction</p>
+          <p class="mt-2 font-display text-3xl font-extrabold text-lime">₹2.47 crore</p>
+          <p class="mt-3 text-sm leading-relaxed text-secondary">
+            Average saving per breach in India from offensive security testing such as penetration testing and red teaming.
+          </p>
+        </article>
+      </div>
+
+      <p class="mt-4 text-xs text-muted">
+        Sources: Digital Personal Data Protection Act, 2023, Schedule; IBM, Cost of a Data Breach Report 2026, India findings (released 3 August 2026).
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-surface/30 py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold tracking-tight text-mist sm:text-4xl">
+        What &ldquo;reasonable security safeguards&rdquo; means in plain words
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-secondary">
+        If your business website, clinic portal, school system or online store collects names, phone numbers, email addresses, student details or customer orders, you are responsible for protecting that personal data from unauthorised access or leaks.
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-border bg-surface p-6">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-night text-lime">
+            <Icon name="web-vapt" class="h-5 w-5" />
+          </div>
+          <h3 class="mt-4 text-lg font-extrabold text-mist">1. Find hidden technical gaps</h3>
+          <p class="mt-2 text-sm leading-relaxed text-secondary">
+            A one-time <strong class="text-mist">Web Check</strong>, <strong class="text-mist">Web VAPT</strong> or <strong class="text-mist">Security Audit</strong> checks your forms, login systems, databases, SSL setup and permissions so you know where data could be exposed and how to fix it.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-border bg-surface p-6">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-night text-lime">
+            <Icon name="continues" class="h-5 w-5" />
+          </div>
+          <h3 class="mt-4 text-lg font-extrabold text-mist">2. Keep checking month after month</h3>
+          <p class="mt-2 text-sm leading-relaxed text-secondary">
+            Security isn&apos;t one-time. Monthly protection plans (<strong class="text-mist">CARE</strong>, <strong class="text-mist">SHIELD</strong> and <strong class="text-mist">COMPLETE</strong>) provide scheduled security checks, backup checks, updates and monthly reports to help demonstrate ongoing technical care.
+          </p>
+        </article>
+      </div>
+
+      <div
+        role="note"
+        class="mt-10 rounded-2xl border border-lime/40 bg-surface p-6 text-sm leading-relaxed text-mist"
+      >
+        <p class="font-mono text-xs uppercase tracking-[0.16em] text-lime">Important notice</p>
+        <p class="mt-2">
+          This page is general information, not legal advice. For full DPDP compliance, consult a legal adviser.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FinalCtaBand />
+</BaseLayout>

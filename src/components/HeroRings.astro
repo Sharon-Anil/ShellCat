@@ -1,0 +1,51 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 640 640"
+  fill="none"
+  class={`pointer-events-none select-none ${className}`}
+  aria-hidden="true"
+>
+  <g stroke="#262B1C" stroke-width="1.5">
+    <path d="M418 392 C383 431 323 433 286 396 C249 360 249 300 286 264 C323 228 383 230 418 268" />
+    <path d="M458 428 C403 489 308 492 249 435 C189 378 189 282 249 225 C308 168 403 171 458 232" />
+    <path d="M498 464 C423 548 292 553 211 474 C130 395 130 265 211 186 C292 107 423 112 498 196" />
+    <path d="M539 500 C443 607 277 613 174 513 C70 413 70 247 174 147 C277 47 443 53 539 160" />
+    <path d="M579 536 C462 666 261 673 136 552 C11 430 11 230 136 108 C261 -13 462 -6 579 124" />
+  </g>
+  <g stroke="#343A26" stroke-width="1">
+    <line x1="244" y1="160" x2="391" y2="113" />
+    <line x1="391" y1="113" x2="498" y2="196" />
+    <line x1="244" y1="160" x2="329" y2="286" />
+    <line x1="329" y1="286" x2="453" y2="408" />
+    <line x1="229" y1="412" x2="329" y2="286" />
+    <line x1="391" y1="113" x2="539" y2="290" />
+  </g>
+  <path
+    d="M158 275 C171 227 202 187 244 160"
+    stroke="#C6F432"
+    stroke-width="2.2"
+    stroke-linecap="round"
+  />
+  <circle cx="244" cy="160" r="3.6" fill="#C6F432" />
+  <path
+    d="M281 459 C260 448 242 431 229 412"
+    stroke="#C6F432"
+    stroke-width="2.2"
+    stroke-linecap="round"
+  />
+  <circle cx="229" cy="412" r="3.6" fill="#C6F432" />
+  <circle cx="453" cy="408" r="3" fill="#C6F432" />
+  <circle cx="453" cy="408" r="7.5" stroke="#C6F432" stroke-opacity="0.45" stroke-width="1.2" />
+  <circle cx="391" cy="113" r="2.3" fill="#465031" />
+  <circle cx="329" cy="286" r="2.3" fill="#465031" />
+  <circle cx="498" cy="196" r="2.3" fill="#465031" />
+  <circle cx="539" cy="290" r="2.3" fill="#465031" />
+</svg>

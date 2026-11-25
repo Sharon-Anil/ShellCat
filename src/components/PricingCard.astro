@@ -1,0 +1,93 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  code?: string;
+  brandPrefix?: string;
+  name: string;
+  pricePrefix?: string;
+  price: string;
+  priceSuffix?: string;
+  billing: string;
+  features: string[];
+  featured?: boolean;
+  badge?: string;
+  bookingValue: string;
+  ctaLabel?: string;
+}
+
+const {
+  code,
+  brandPrefix = 'SHELLCAT',
+  name,
+  pricePrefix,
+  price,
+  priceSuffix,
+  billing,
+  features,
+  featured = false,
+  badge,
+  bookingValue,
+  ctaLabel = 'Book this',
+} = Astro.props;
+
+const contactHref = `/contact?service=${encodeURIComponent(bookingValue)}`;
+---
+
+<article
+  class={`flex flex-col justify-between rounded-2xl border p-6 sm:p-7 transition-colors ${
+    featured
+      ? 'border-lime/70 bg-surface-elevated'
+      : 'border-border bg-surface hover:border-lime/40'
+  }`}
+>
+  <div>
+    <div class="flex items-start justify-between gap-3">
+      <div>
+        {code && <p class="font-mono text-xs text-muted">{code}</p>}
+        <p class="mt-0.5 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-secondary">
+          {brandPrefix}
+        </p>
+        <h3 class="mt-1 text-xl font-extrabold tracking-tight text-mist">{name}</h3>
+      </div>
+
+      {badge && (
+        <span class="rounded-full border border-lime/40 bg-lime/10 px-2.5 py-1 font-mono text-[11px] font-medium text-lime">
+          {badge}
+        </span>
+      )}
+    </div>
+
+    <div class="mt-5 border-b border-border pb-5">
+      {pricePrefix && <p class="text-xs font-medium text-muted">{pricePrefix}</p>}
+      <p class="mt-1 flex items-baseline gap-1">
+        <span class="font-display text-3xl font-extrabold text-lime sm:text-4xl">{price}</span>
+        {priceSuffix && <span class="text-sm font-medium text-secondary">{priceSuffix}</span>}
+      </p>
+      <p class="mt-1.5 text-sm text-secondary">{billing}</p>
+    </div>
+
+    <ul class="mt-5 space-y-2.5 text-sm text-secondary">
+      {features.map((feature) => (
+        <li class="flex items-start gap-2.5">
+          <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-lime" />
+          <span>{feature}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="mt-7 pt-2">
+    <a
+      href={contactHref}
+      class={`inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
+        featured
+          ? 'bg-lime text-night hover:bg-lime-hover'
+          : 'border border-border bg-night text-mist hover:border-lime hover:text-lime'
+      }`}
+    >
+      <span>{ctaLabel}</span>
+      <Icon name="arrow-right" class="h-4 w-4" />
+    </a>
+  </div>
+</article>

@@ -1,0 +1,21 @@
+{
+  "name": "SHELLCAT — Cybersecurity & Software Development | Kerala, India",
+  "short_name": "SHELLCAT",
+  "description": "Advanced cybersecurity services, penetration testing, and secure software development from Kerala, India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101208",
+  "theme_color": "#101208",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+import site from '../../data/site.json';
+---
+
+<BaseLayout
+  title="Terms of Service — SHELLCAT"
+  description="Terms governing website use, authorised security testing, software development scopes and pricing for SHELLCAT."
+  currentPath="/legal/terms-of-service"
+>
+  <section class="border-b border-border bg-shellcat-grid py-14 sm:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <SectionLabel file="terms-of-service.txt" />
+      <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-mist">Terms of Service</h1>
+      <p class="mt-3 text-sm text-muted">
+        Last updated: <span class="placeholder-token">[INSERT EFFECTIVE DATE]</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 sm:py-16">
+    <div class="mx-auto max-w-4xl space-y-8 px-4 text-sm leading-relaxed text-secondary sm:px-6 sm:text-base lg:px-8">
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">1. Website information</h2>
+        <p>
+          Content on this website is provided by {site.company} ({site.location}) for general information about our cybersecurity and software development services. Nothing on this site constitutes legal advice.
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">2. Authorised security testing only</h2>
+        <p>
+          Every security engagement is performed only with appropriate written authorisation, an agreed scope and defined rules of engagement. Submitting an enquiry does not authorise testing until written permission and scope are signed by an authorised representative.
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">3. Pricing &amp; project scope</h2>
+        <p>
+          All prices published on this website are introductory starting prices. Final quotations depend on asset count, application complexity, scope, testing depth and engagement duration. Hosting, domain names, premium third-party services and work outside the agreed scope may cost extra.
+        </p>
+        <p><span class="placeholder-token">{site.gstNote}</span></p>
+      </article>
+
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">4. No unrealistic security guarantees</h2>
+        <p>
+          Security testing reduces risk by identifying weaknesses within an agreed scope and timeframe, but no digital system can be guaranteed completely immune to future threats or newly discovered vulnerabilities.
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-border bg-surface p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl font-extrabold text-mist">5. Governing law</h2>
+        <p>
+          These terms and client engagements are governed by the laws applicable in <span class="placeholder-token">{site.legal.jurisdiction}</span>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,53 @@
+{
+  "steps": [
+    {
+      "number": "01",
+      "title": "DISCOVER",
+      "description": "Understand the customer's business, technology and security requirements."
+    },
+    {
+      "number": "02",
+      "title": "ASSESS",
+      "description": "Review the agreed systems, applications and infrastructure."
+    },
+    {
+      "number": "03",
+      "title": "TEST & DEVELOP",
+      "description": "Conduct authorised security testing or build the required software."
+    },
+    {
+      "number": "04",
+      "title": "REPORT & IMPROVE",
+      "description": "Provide findings, documentation and practical recommendations."
+    },
+    {
+      "number": "05",
+      "title": "SUPPORT & MAINTAIN",
+      "description": "Offer agreed follow-up, maintenance and security support."
+    }
+  ],
+  "assuranceLabel": "OUR ASSURANCE",
+  "assurance": "Every security engagement is performed only with appropriate written authorisation, an agreed scope and defined rules of engagement.",
+  "beforeWeTest": [
+    {
+      "item": "Written authorisation",
+      "detail": "Signed permission from an authorised owner or representative before any test begins."
+    },
+    {
+      "item": "Agreed scope",
+      "detail": "Exact domains, IP addresses, applications and accounts listed in writing so nothing outside scope is touched."
+    },
+    {
+      "item": "Rules of engagement",
+      "detail": "Clear boundaries covering allowed techniques, excluded actions and sensitive data handling."
+    },
+    {
+      "item": "Testing window",
+      "detail": "Scheduled dates and hours agreed with your team so testing aligns with your operations."
+    },
+    {
+      "item": "Emergency contact",
+      "detail": "Direct points of contact on both sides to pause or adjust testing immediately if needed."
+    }
+  ]
+}

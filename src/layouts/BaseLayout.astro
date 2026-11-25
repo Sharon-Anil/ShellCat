@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+import site from '../data/site.json';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  currentPath?: string;
+  schemas?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  currentPath = '/',
+  schemas = [],
+  noindex = false,
+} = Astro.props;
+
+const baseUrl = (import.meta.env.PUBLIC_SITE_URL || Astro.site?.toString() || 'https://shellcat.example').replace(/\/$/, '');
+const canonicalUrl = new URL(currentPath, `${baseUrl}/`).toString();
+const ogImageUrl = `${baseUrl}/og-preview.png`;
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'SHELLCAT',
+  alternateName: 'ShellCat',
+  description:
+    'Cybersecurity testing, penetration testing (VAPT), software and web development, and monthly digital protection based in Kerala, India.',
+  url: baseUrl,
+  logo: `${baseUrl}/logos/shellcat-horizontal-on-dark.svg`,
+  image: ogImageUrl,
+  areaServed: {
+    '@type': 'Place',
+    name: 'Kerala, India',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Kerala',
+    addressCountry: 'IN',
+  },
+  email: site.email,
+  telephone: site.phone,
+  serviceType: [
+    'Website Penetration Testing (VAPT)',
+    'Web Application Security Testing',
+    'API Security Testing',
+    'Network Security Assessment',
+    'Red Team Assessment',
+    'Cloud Security Assessment',
+    'Mobile Application Security Testing',
+    'Malware Analysis',
+    'Security Auditing',
+    'Incident Investigation',
+    'Software and Web Development',
+    'Monthly Website Protection',
+  ],
+};
+
+const allSchemas = [organizationSchema, ...schemas];
+---
+
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#101208" />
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <link rel="canonical" href={canonicalUrl} />
+    )}
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SHELLCAT" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    {allSchemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+
+    {plausibleDomain && (
+      <script
+        defer
+        data-domain={plausibleDomain}
+        src="https://plausible.io/js/script.js"
+      />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col bg-night text-mist antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-lime focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-night"
+    >
+      Skip to main content
+    </a>
+
+    <Header currentPath={currentPath} />
+
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+    <FloatingWhatsApp />
+  </body>
+</html>

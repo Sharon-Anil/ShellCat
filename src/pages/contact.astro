@@ -1,0 +1,365 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import Icon from '../components/Icon.astro';
+import site from '../data/site.json';
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
+
+const serviceGroups = [
+  {
+    label: 'Security Packages',
+    items: [
+      'SHELLCAT WEB CHECK (Starting at ₹10,000)',
+      'SHELLCAT WEB VAPT (Starting at ₹25,000)',
+      'SHELLCAT WEB + API SECURITY (Starting at ₹40,000)',
+      'SHELLCAT NETWORK DEFENCE (Starting at ₹30,000)',
+      'SHELLCAT RED TEAM (Starting at ₹1,00,000)',
+      'SHELLCAT SECURITY CARE (Starting at ₹7,500/month)',
+    ],
+  },
+  {
+    label: 'Monthly Website Protection',
+    items: [
+      'SHELLCAT CARE Monthly Protection (₹3,000/month)',
+      'SHELLCAT SHIELD Monthly Protection (₹7,500/month)',
+      'SHELLCAT COMPLETE Monthly Protection (₹15,000/month)',
+    ],
+  },
+  {
+    label: 'Cybersecurity Services',
+    items: [
+      'Website Penetration Testing (VAPT)',
+      'Web Application Security Testing',
+      'API Security Testing',
+      'Network Security Assessment',
+      'Red Team Assessment',
+      'Cloud Security Assessment',
+      'Mobile Application Security Testing',
+      'Malware Analysis',
+      'Security Auditing',
+      'Incident Investigation',
+      'DPDP Security Readiness Assessment',
+    ],
+  },
+  {
+    label: 'Software & Web Development',
+    items: [
+      'Business Website Development',
+      'E-commerce Development',
+      'Custom Web Application Development',
+      'SaaS Product Development',
+      'SHELLCAT STARTER Website Package (₹30,000)',
+      'SHELLCAT PROFESSIONAL Website Package (₹60,000)',
+      'SHELLCAT BUSINESS PLUS Package (₹1,20,000)',
+      'General Security or Software Enquiry',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Contact SHELLCAT — Book a Web Check or Request a Quote | Kerala, India"
+  description="Contact SHELLCAT to book a Web Check, schedule penetration testing (VAPT), discuss custom software development or start monthly website protection."
+  currentPath="/contact"
+>
+  {turnstileSiteKey && (
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
+  )}
+
+  <section class="border-b border-border bg-shellcat-grid py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <SectionLabel file="contact.txt" />
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-mist sm:text-5xl">
+        Book a Web Check or Enquiry
+      </h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-secondary sm:text-lg">
+        Tell us what you want to test, build or protect. We respond clearly with scope questions and next steps—no pushy sales calls.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <!-- FORM -->
+        <div class="lg:col-span-7">
+          <form
+            id="shellcat-contact-form"
+            action="/api/contact"
+            method="POST"
+            novalidate
+            class="space-y-5 rounded-2xl border border-border bg-surface p-6 sm:p-8"
+          >
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="field-name" class="block text-sm font-medium text-mist">
+                  Name <span class="text-lime" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="field-name"
+                  name="name"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  maxlength="120"
+                  class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist placeholder:text-muted"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label for="field-company" class="block text-sm font-medium text-mist">
+                  Company / Organisation
+                </label>
+                <input
+                  id="field-company"
+                  name="company"
+                  type="text"
+                  autocomplete="organization"
+                  maxlength="160"
+                  class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist placeholder:text-muted"
+                  placeholder="Business, school, clinic or startup"
+                />
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="field-email" class="block text-sm font-medium text-mist">
+                  Email <span class="text-lime" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="field-email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  maxlength="160"
+                  class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist placeholder:text-muted"
+                  placeholder="you@company.com"
+                />
+              </div>
+
+              <div>
+                <label for="field-phone" class="block text-sm font-medium text-mist">
+                  Phone / WhatsApp <span class="text-lime" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="field-phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  autocomplete="tel"
+                  maxlength="40"
+                  class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist placeholder:text-muted"
+                  placeholder="+91 98XXXXXXXX"
+                />
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="field-service" class="block text-sm font-medium text-mist">
+                  Service interested in <span class="text-lime" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="field-service"
+                  name="service"
+                  required
+                  class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist"
+                >
+                  {serviceGroups.map((group) => (
+                    <optgroup label={group.label}>
+                      {group.items.map((option) => (
+                        <option value={option}>{option}</option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label for="field-website" class="block text-sm font-medium text-mist">
+                  Website URL <span class="text-xs text-muted">(optional)</span>
+                </label>
+                <input
+                  id="field-website"
+                  name="website"
+                  type="url"
+                  autocomplete="url"
+                  maxlength="300"
+                  class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist placeholder:text-muted"
+                  placeholder="https://yourwebsite.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="field-message" class="block text-sm font-medium text-mist">
+                Message <span class="text-lime" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="field-message"
+                name="message"
+                rows="4"
+                required
+                maxlength="3000"
+                class="mt-1.5 w-full rounded-xl border border-border bg-night px-4 py-3 text-sm text-mist placeholder:text-muted"
+                placeholder="Tell us briefly what you want checked, built or protected, and any target timeline."
+              ></textarea>
+            </div>
+
+            <!-- Honeypot field for spam protection -->
+            <div class="honeypot-field" aria-hidden="true">
+              <label for="field-company-fax">Leave this field blank</label>
+              <input
+                id="field-company-fax"
+                name="company_fax"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input
+                id="field-consent"
+                name="consent"
+                type="checkbox"
+                required
+                class="mt-1 h-4 w-4 rounded border-border bg-night accent-lime"
+              />
+              <label for="field-consent" class="text-sm leading-relaxed text-secondary">
+                I agree to SHELLCAT contacting me about this enquiry. See our{' '}
+                <a href="/legal/privacy-policy" class="text-lime underline underline-offset-4">
+                  Privacy Policy
+                </a>
+                . <span class="text-lime" aria-hidden="true">*</span>
+              </label>
+            </div>
+
+            <!-- Cloudflare Turnstile -->
+            <div>
+              {turnstileSiteKey ? (
+                <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
+              ) : (
+                <div class="rounded-xl border border-dashed border-lime/45 bg-night p-4 text-xs text-secondary">
+                  <p class="font-mono text-lime">Cloudflare Turnstile anti-spam widget</p>
+                  <p class="mt-1">
+                    Set <code class="font-mono text-mist">PUBLIC_TURNSTILE_SITE_KEY</code> and{' '}
+                    <code class="font-mono text-mist">TURNSTILE_SECRET_KEY</code> in Vercel environment variables (<span class="placeholder-token">[INSERT CLOUDFLARE TURNSTILE SITE KEY]</span>).
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div
+              id="contact-status"
+              role="status"
+              aria-live="polite"
+              class="hidden rounded-xl border p-4 text-sm"
+            ></div>
+
+            <button
+              type="submit"
+              id="contact-submit-btn"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-lime px-6 py-3.5 text-sm font-semibold text-night transition-colors hover:bg-lime-hover disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              <span>Send enquiry</span>
+              <Icon name="arrow-right" class="h-4 w-4" />
+            </button>
+          </form>
+        </div>
+
+        <!-- DIRECT CONTACT DETAILS -->
+        <aside class="space-y-6 lg:col-span-5">
+          <div class="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+            <p class="font-mono text-xs uppercase tracking-[0.18em] text-lime">Direct details</p>
+            <h2 class="mt-2 text-2xl font-extrabold text-mist">Reach SHELLCAT</h2>
+
+            <dl class="mt-6 space-y-5 text-sm">
+              <div class="flex items-start gap-3">
+                <Icon name="whatsapp" class="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+                <div>
+                  <dt class="font-mono text-xs uppercase tracking-wider text-muted">WhatsApp</dt>
+                  <dd class="mt-1">
+                    <a
+                      href={site.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="font-medium text-mist hover:text-lime"
+                    >
+                      <span class="placeholder-token">{site.whatsappNumber}</span>
+                    </a>
+                  </dd>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <Icon name="mail" class="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+                <div>
+                  <dt class="font-mono text-xs uppercase tracking-wider text-muted">Email</dt>
+                  <dd class="mt-1 break-all">
+                    <span class="placeholder-token">{site.email}</span>
+                  </dd>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <Icon name="phone" class="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+                <div>
+                  <dt class="font-mono text-xs uppercase tracking-wider text-muted">Phone</dt>
+                  <dd class="mt-1">
+                    <span class="placeholder-token">{site.phone}</span>
+                  </dd>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <Icon name="map-pin" class="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+                <div>
+                  <dt class="font-mono text-xs uppercase tracking-wider text-muted">Location</dt>
+                  <dd class="mt-1 text-mist">{site.location}</dd>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <Icon name="calendar" class="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+                <div>
+                  <dt class="font-mono text-xs uppercase tracking-wider text-muted">Book a call</dt>
+                  <dd class="mt-1">
+                    <span class="placeholder-token">{site.bookingLink}</span>
+                  </dd>
+                </div>
+              </div>
+
+              <div class="border-t border-border pt-4">
+                <dt class="font-mono text-xs uppercase tracking-wider text-muted">Response time</dt>
+                <dd class="mt-1">
+                  <span class="placeholder-token">{site.responseTime}</span>
+                </dd>
+              </div>
+
+              <div>
+                <dt class="font-mono text-xs uppercase tracking-wider text-muted">Social</dt>
+                <dd class="mt-1">
+                  <span class="placeholder-token">{site.socialLinksPlaceholder}</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="rounded-2xl border border-lime/35 bg-surface p-6 text-sm leading-relaxed text-secondary">
+            <p class="font-mono text-xs uppercase tracking-[0.16em] text-lime">Before we test</p>
+            <p class="mt-2">
+              Submitting your URL here never triggers any scan. Active security testing only starts after written authorisation, an agreed scope and defined rules of engagement.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline src="/scripts/contact.js" defer></script>

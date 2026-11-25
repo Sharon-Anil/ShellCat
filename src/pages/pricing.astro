@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import PricingCard from '../components/PricingCard.astro';
+import FinalCtaBand from '../components/FinalCtaBand.astro';
+import Icon from '../components/Icon.astro';
+import pricing from '../data/pricing.json';
+---
+
+<BaseLayout
+  title="Pricing — Security Assessments, Website Packages & Monthly Protection | SHELLCAT"
+  description="Transparent Indian pricing for SHELLCAT cybersecurity packages (from ₹10,000), website development packages (from ₹30,000) and monthly protection plans (from ₹3,000/month)."
+  currentPath="/pricing"
+>
+  <section class="border-b border-border bg-shellcat-grid py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <SectionLabel file="pricing.txt" />
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-mist sm:text-5xl">
+        Security &amp; Website Pricing
+      </h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-secondary sm:text-lg">
+        Published starting prices so you can plan your budget before the first call. Every engagement begins with clear written scope.
+      </p>
+
+      <nav aria-label="Pricing sections" class="mt-8 flex flex-wrap gap-2.5">
+        <a href="#security-packages" class="rounded-lg border border-border bg-surface px-4 py-2 font-mono text-xs text-mist hover:border-lime hover:text-lime">
+          01 Security Packages
+        </a>
+        <a href="#website-packages" class="rounded-lg border border-border bg-surface px-4 py-2 font-mono text-xs text-mist hover:border-lime hover:text-lime">
+          02 Website Packages
+        </a>
+        <a href="#monthly-protection" class="rounded-lg border border-border bg-surface px-4 py-2 font-mono text-xs text-mist hover:border-lime hover:text-lime">
+          03 Monthly Website Protection
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- SECURITY PACKAGES -->
+  <section id="security-packages" class="scroll-mt-24 border-b border-border py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-lime">A — SECURITY PACKAGES (STARTING PRICES)</p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mist sm:text-4xl">
+          Cybersecurity Assessments &amp; VAPT
+        </h2>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {pricing.securityPackages.map((pkg) => (
+          <PricingCard
+            code={pkg.code}
+            brandPrefix={pkg.brandPrefix}
+            name={pkg.name}
+            pricePrefix={pkg.pricePrefix}
+            price={pkg.price}
+            priceSuffix={pkg.priceSuffix}
+            billing={pkg.billing}
+            features={pkg.features}
+            featured={pkg.featured}
+            badge={pkg.badge}
+            bookingValue={
+              pkg.priceSuffix
+                ? `${pkg.brandPrefix} ${pkg.name} (${pkg.pricePrefix} ${pkg.price}${pkg.priceSuffix})`
+                : `${pkg.brandPrefix} ${pkg.name} (${pkg.pricePrefix} ${pkg.price})`
+            }
+          />
+        ))}
+      </div>
+
+      <div class="mt-8 flex items-start gap-3 rounded-xl border border-border bg-surface p-5 text-sm text-secondary">
+        <Icon name="ethical" class="mt-0.5 h-5 w-5 shrink-0 text-lime" />
+        <p>{pricing.securityPackagesNote}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEBSITE PACKAGES -->
+  <section id="website-packages" class="scroll-mt-24 border-b border-border bg-surface/30 py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-lime">B — WEBSITE PACKAGES (ONE-TIME)</p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mist sm:text-4xl">
+          Websites &amp; Custom Applications
+        </h2>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {pricing.websitePackages.map((pkg) => (
+          <PricingCard
+            brandPrefix={pkg.brandPrefix}
+            name={pkg.name}
+            price={pkg.price}
+            billing={pkg.billing}
+            features={pkg.features}
+            bookingValue={
+              pkg.slug === 'shellcat-business-plus'
+                ? 'SHELLCAT BUSINESS PLUS Package (₹1,20,000)'
+                : `${pkg.brandPrefix} ${pkg.name} Website Package (${pkg.price})`
+            }
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MONTHLY PROTECTION -->
+  <section id="monthly-protection" class="scroll-mt-24 border-b border-border py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-lime">C — MONTHLY WEBSITE PROTECTION</p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mist sm:text-4xl">
+          Security isn&apos;t one-time.
+        </h2>
+        <p class="mt-3 text-base text-secondary">
+          Keep uptime, SSL certificates, updates, backups and scheduled security checks running every month.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {pricing.monthlyProtection.map((plan) => (
+          <PricingCard
+            brandPrefix={plan.brandPrefix}
+            name={plan.name}
+            price={plan.price}
+            priceSuffix={plan.priceSuffix}
+            billing={plan.billing}
+            features={plan.features}
+            featured={plan.featured}
+            badge={plan.badge}
+            bookingValue={`${plan.brandPrefix} ${plan.name} Monthly Protection (${plan.price}${plan.priceSuffix})`}
+            ctaLabel={`Choose ${plan.name}`}
+          />
+        ))}
+      </div>
+
+      <div class="mt-8 space-y-3 rounded-xl border border-border bg-surface p-5 text-sm text-secondary">
+        <p>{pricing.monthlyNotes[0]}</p>
+        <p>
+          <span class="placeholder-token">{pricing.monthlyNotes[1]}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FinalCtaBand />
+</BaseLayout>

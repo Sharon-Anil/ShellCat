@@ -1,0 +1,216 @@
+{
+  "securityPackages": [
+    {
+      "code": "01",
+      "slug": "shellcat-web-check",
+      "brandPrefix": "SHELLCAT",
+      "name": "WEB CHECK",
+      "pricePrefix": "Starting at",
+      "price": "₹10,000",
+      "billing": "One-time assessment",
+      "featured": true,
+      "badge": "Best first step",
+      "features": [
+        "Basic website security assessment",
+        "Common vulnerability checks",
+        "SSL and security configuration review",
+        "Findings summary",
+        "Recommended security improvements"
+      ]
+    },
+    {
+      "code": "02",
+      "slug": "shellcat-web-vapt",
+      "brandPrefix": "SHELLCAT",
+      "name": "WEB VAPT",
+      "pricePrefix": "Starting at",
+      "price": "₹25,000",
+      "billing": "One-time penetration test",
+      "featured": false,
+      "features": [
+        "Manual and automated security testing",
+        "Authentication and access-control testing",
+        "OWASP-based vulnerability assessment",
+        "Risk classification",
+        "Detailed technical report",
+        "Remediation recommendations"
+      ]
+    },
+    {
+      "code": "03",
+      "slug": "shellcat-web-api-security",
+      "brandPrefix": "SHELLCAT",
+      "name": "WEB + API SECURITY",
+      "pricePrefix": "Starting at",
+      "price": "₹40,000",
+      "billing": "One-time assessment",
+      "featured": false,
+      "features": [
+        "Website penetration testing",
+        "API security testing",
+        "Authentication and authorisation checks",
+        "Data exposure assessment",
+        "Technical report and remediation guidance"
+      ]
+    },
+    {
+      "code": "04",
+      "slug": "shellcat-network-defence",
+      "brandPrefix": "SHELLCAT",
+      "name": "NETWORK DEFENCE",
+      "pricePrefix": "Starting at",
+      "price": "₹30,000",
+      "billing": "One-time assessment",
+      "featured": false,
+      "features": [
+        "Network discovery and assessment",
+        "Server and device security checks",
+        "Vulnerability scanning",
+        "Configuration review",
+        "Risk report and recommendations"
+      ]
+    },
+    {
+      "code": "05",
+      "slug": "shellcat-red-team",
+      "brandPrefix": "SHELLCAT",
+      "name": "RED TEAM",
+      "pricePrefix": "Starting at",
+      "price": "₹1,00,000",
+      "billing": "Custom engagement",
+      "featured": false,
+      "features": [
+        "Authorised attack simulation",
+        "Agreed attack scenarios",
+        "Security detection and response evaluation",
+        "Findings and evidence",
+        "Executive and technical reports"
+      ]
+    },
+    {
+      "code": "06",
+      "slug": "shellcat-security-care",
+      "brandPrefix": "SHELLCAT",
+      "name": "SECURITY CARE",
+      "pricePrefix": "Starting at",
+      "price": "₹7,500",
+      "priceSuffix": "/month",
+      "billing": "Recurring service",
+      "featured": false,
+      "features": [
+        "Scheduled security checks",
+        "Vulnerability review",
+        "Security configuration review",
+        "Monthly security report",
+        "Remediation guidance"
+      ]
+    }
+  ],
+  "securityPackagesNote": "All prices are introductory starting prices. Final quotations depend on asset count, application complexity, scope, testing depth and engagement duration.",
+  "websitePackages": [
+    {
+      "slug": "shellcat-starter",
+      "brandPrefix": "SHELLCAT",
+      "name": "STARTER",
+      "price": "₹30,000",
+      "billing": "One-time",
+      "featured": false,
+      "features": [
+        "Up to 5 pages",
+        "Responsive desktop and mobile design",
+        "Contact form and WhatsApp integration",
+        "Basic SEO structure",
+        "Basic security hardening",
+        "Deployment and handover"
+      ]
+    },
+    {
+      "slug": "shellcat-professional",
+      "brandPrefix": "SHELLCAT",
+      "name": "PROFESSIONAL",
+      "price": "₹60,000",
+      "billing": "One-time",
+      "featured": false,
+      "features": [
+        "Up to 10 pages",
+        "Custom UI/UX",
+        "CMS/content editing",
+        "Enquiry forms",
+        "Database integration as required",
+        "Business integrations",
+        "Backup configuration",
+        "Deployment and documentation"
+      ]
+    },
+    {
+      "slug": "shellcat-business-plus",
+      "brandPrefix": "SHELLCAT",
+      "name": "BUSINESS PLUS",
+      "price": "₹1,20,000",
+      "billing": "One-time",
+      "featured": false,
+      "features": [
+        "Custom website or web application",
+        "Admin dashboard",
+        "User login and registration",
+        "Database and API integration",
+        "Role-based access",
+        "Advanced workflows",
+        "Security testing before launch",
+        "Deployment and handover"
+      ]
+    }
+  ],
+  "monthlyProtection": [
+    {
+      "slug": "shellcat-care",
+      "brandPrefix": "SHELLCAT",
+      "name": "CARE",
+      "price": "₹3,000",
+      "priceSuffix": "/month",
+      "billing": "Monthly website protection",
+      "featured": false,
+      "features": [
+        "Basic uptime checks",
+        "SSL checks",
+        "Monthly website health review"
+      ]
+    },
+    {
+      "slug": "shellcat-shield",
+      "brandPrefix": "SHELLCAT",
+      "name": "SHIELD",
+      "price": "₹7,500",
+      "priceSuffix": "/month",
+      "billing": "Monthly website protection",
+      "featured": true,
+      "badge": "Recommended ongoing protection",
+      "features": [
+        "All CARE features",
+        "Scheduled updates",
+        "Backup checks",
+        "Scheduled security checks"
+      ]
+    },
+    {
+      "slug": "shellcat-complete",
+      "brandPrefix": "SHELLCAT",
+      "name": "COMPLETE",
+      "price": "₹15,000",
+      "priceSuffix": "/month",
+      "billing": "Monthly website protection",
+      "featured": false,
+      "features": [
+        "All SHIELD features",
+        "WAF management",
+        "More frequent security checks",
+        "Monthly security report",
+        "Agreed maintenance"
+      ]
+    }
+  ],
+  "monthlyNotes": [
+    "Hosting, domain names, premium third-party services and any work outside the agreed scope may cost extra.",
+    "[GST: confirm whether prices include or exclude GST]"
+  ]
+}

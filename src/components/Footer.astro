@@ -1,0 +1,130 @@
+---
+import site from '../data/site.json';
+import Icon from './Icon.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border bg-night">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div class="space-y-4">
+        <a href="/" class="inline-flex items-center" aria-label="SHELLCAT Home">
+          <img
+            src="/logos/shellcat-horizontal-on-dark.svg"
+            alt="ShellCat"
+            width="146"
+            height="46"
+            class="h-9 w-auto"
+            decoding="async"
+          />
+        </a>
+        <p class="font-mono text-xs tracking-[0.18em] text-lime">{site.tagline}</p>
+        <p class="text-sm leading-relaxed text-secondary">
+          Cybersecurity testing, intelligent software development and continuing digital protection from {site.location}.
+        </p>
+        <div class="pt-1">
+          <a
+            href={site.brochurePdf}
+            download
+            class="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-3.5 py-2 text-xs font-medium text-mist transition-colors hover:border-lime/60 hover:text-lime"
+          >
+            <Icon name="download" class="h-4 w-4 text-lime" />
+            <span>Download brochure (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted">Navigation</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="/" class="text-secondary transition-colors hover:text-lime">Home</a></li>
+          {site.nav.map((item) => (
+            <li>
+              <a href={item.href} class="text-secondary transition-colors hover:text-lime">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted">Contact</h2>
+        <ul class="mt-4 space-y-3 text-sm text-secondary">
+          <li class="flex items-start gap-2.5">
+            <Icon name="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-lime" />
+            <span>{site.location}</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <Icon name="mail" class="mt-0.5 h-4 w-4 shrink-0 text-lime" />
+            <span class="break-all">{site.email}</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <Icon name="phone" class="mt-0.5 h-4 w-4 shrink-0 text-lime" />
+            <span>{site.phone}</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <Icon name="whatsapp" class="mt-0.5 h-4 w-4 shrink-0 text-lime" />
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-lime transition-colors"
+            >
+              WhatsApp: {site.whatsappNumber}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted">Legal & Social</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li>
+            <a href="/legal/privacy-policy" class="text-secondary transition-colors hover:text-lime">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/legal/terms-of-service" class="text-secondary transition-colors hover:text-lime">
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a href="/legal/responsible-disclosure" class="text-secondary transition-colors hover:text-lime">
+              Responsible Disclosure Policy
+            </a>
+          </li>
+          <li>
+            <a href="/.well-known/security.txt" class="font-mono text-xs text-muted transition-colors hover:text-lime">
+              /.well-known/security.txt
+            </a>
+          </li>
+        </ul>
+
+        <div class="mt-5 border-t border-border pt-4">
+          <p class="font-mono text-xs uppercase tracking-[0.15em] text-muted">Social</p>
+          <p class="mt-1.5 text-xs text-secondary">{site.socialLinksPlaceholder}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-3 border-t border-border pt-7 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex items-center gap-2.5">
+        <img
+          src="/logos/shellcat-icon-on-dark.svg"
+          alt=""
+          width="16"
+          height="21"
+          class="h-4 w-auto"
+          aria-hidden="true"
+        />
+        <span>© {year} {site.company}. All rights reserved.</span>
+      </div>
+      <p>
+        Authorised security testing only · Written scope &amp; rules of engagement required.
+      </p>
+    </div>
+  </div>
+</footer>
